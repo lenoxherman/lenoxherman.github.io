@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/BlogPost1.html",
       "/posts/WomeninDataScience.html",
       "/posts/new-test-post/index.html",
       "/posts/new-new-test-post/index.html",
