@@ -2,6 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Blog1/BlogPost1revised.html",
+      "/posts/Blog1/BlogPost1.html",
+      "/posts/Blog3/WomeninDataScience.html",
+      "/posts/Mid course eval/mid-course.html",
       "/posts/new-test-post/index.html",
       "/posts/new-new-test-post/index.html",
       "/posts/example-blog-post/index.html"

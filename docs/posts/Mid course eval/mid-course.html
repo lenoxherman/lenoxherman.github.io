@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Phil Chodrow">
-<meta name="dcterms.date" content="2023-01-10">
-<meta name="description" content="An example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.">
 
-<title>My Awesome CSCI 0451 Blog - Hello Blog</title>
+<title>My Awesome CSCI 0451 Blog - CSCI 0451: Mid-Course Reflection</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,35 +85,6 @@ background-size: cover;
       }
 </style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -197,31 +131,14 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Hello Blog</h1>
-                  <div>
-        <div class="description">
-          An example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.
-        </div>
-      </div>
-                </div>
+      <h1 class="title">CSCI 0451: Mid-Course Reflection</h1>
+                      </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Phil Chodrow </p>
-            </div>
-    </div>
       
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">January 10, 2023</p>
-      </div>
-    </div>
     
       
     </div>
@@ -238,70 +155,133 @@ window.Quarto = {
 
 
 
-<div id="cell-1" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> source <span class="im">import</span> Perceptron</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This is an example of the blog posts that you’ll submit as your primary form of learning demonstration in CSCI 0451. I created this post by modifying the file <code>posts/example-blog-post/index.ipynb</code> in VSCode. You can also use JupyterLab for this editing if you prefer. Finally, it is possible to write blog posts without using notebooks by writing <code>.qmd</code> files, as illustrated <a href="https://quarto.org/docs/get-started/hello/vscode.html">here</a>.</p>
-<section id="frontmatter" class="level1">
-<h1>Frontmatter</h1>
-<p>Your notebook needs to contain some metadata: things like the title, author, date, etc. You specify this in a <code>raw</code> cell at the very beginning of the notebook. In this notebook, the contents of this cell is:</p>
-<pre><code>---
-title: Hello Blog
-author: Phil Chodrow
-date: '2023-01-10'
-image: "image.jpg"
-description: "An example blog post illustrating the key techniques you'll need to demonstrate your learning in CSCI 0451."
-format: html
----</code></pre>
-<p>Frontmatter can be fiddly (it’s sensitive to spaces, for example), and so the best approach is usually to copy and paste it from previous blog posts, modifying it as appropriate.</p>
+<section id="csci-0451-mid-course-reflection" class="level1">
+<h1>CSCI 0451: Mid-Course Reflection</h1>
+<p>Lenox Herman</p>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<p><em>In this section I’ll ask you to fill in some data. You don’t have to give precise numbers – approximate, conversational responses are fine. For example, when I ask “how often have you attended class,” good answers include “almost always,” “I’ve missed three times,” “about 75% of the time,” “not as often as I want,” etc.</em></p>
+<section id="presence-in-class" class="level3">
+<h3 class="anchored" data-anchor-id="presence-in-class">Presence in Class</h3>
+<ul>
+<li><em>How often have you attended class? (e.g.&nbsp;“almost always,” “I missed three times,” etc.)</em> I have missed 1 class thus far. It was the Thursday before break and I left for my trip early.</li>
+<li><em>How often have you taken notes on the core readings ahead of the class period?</em> I usually don’ take notes on the readings, I look at them and skim them but rarely annotate. The readings that deal with Math, especially math required to complete the warmup, I will mark up and takes some notes on to reference back to.</li>
+<li><em>How often have you been <strong>prepared</strong> to present the daily warm-up exercise to your team, even if you weren’t actually called?</em> I have done the warmup every time! (One of my goals) however on some of the math ones I have been grateful that I was not selected because I was confused by the notation/ questions and therefore had to skip certain sections that me, the reading, and Google couldn’t answer.</li>
+<li><em>How many times have you <strong>actually</strong> presented the daily warm-up to your team?</em> I have presented the Warmup a twice</li>
+<li><em>How many times have you asked your team for help while presenting the daily warm-up?</em> Since we have bene working in the same groups, I have grown comfortable with my group and frequently ask them questions. Usually it is when the warmup involves math, I make them go through the explanation a little slower, or ask them how they cam to their answer. Beyond that as well I ask for their feedback. Even today, I had a loose idea for a project and asked my group how they would rearrange the project to make it better.</li>
+<li><em>How often have you learned something new from a teammate’s presentation of the daily warm-up?</em> Honestly, almost every time. People often have totally different approaches than me, whether its math or a discussion question, someone always answers in a way that I hadn’t thought of</li>
+<li><em>How often have you helped a teammate during the daily warm-up presentation?</em> I am usually the one asking the questions, or requiring help in the warm up so not as much as I would like but I hope to improve on that</li>
+</ul>
 </section>
-<section id="running-python-code" class="level1">
-<h1>Running Python Code</h1>
-<p>To run Python code, place your code in a Python code block inside your notebook. You can run the code block inside VSCode (or JupyterLab) using the keyboard shortcut <code>ctrl + Enter</code>. You’ll see the result of your computation below the code, including the value of the most recent statement.</p>
-<div id="cell-3" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"CSCI"</span> <span class="op">+</span> <span class="st">" 0451"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>'CSCI 0451'</code></pre>
-</div>
-</div>
-<p>We’ll have lots of opportunities to make data visualizations in this course. These also display inside the notebook, and get converted into your blog post:</p>
-<div id="cell-5" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span>np.pi, <span class="dv">1001</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.sin(x)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.plot(x, y)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>xlab <span class="op">=</span> plt.xlabel(<span class="st">"x"</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>ylab <span class="op">=</span> plt.ylabel(<span class="st">"y"</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>title <span class="op">=</span> plt.gca().<span class="bu">set</span>(title <span class="op">=</span> <span class="st">"My Fancy Plot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Another thing we’ll often do is implement an algorithm in a source file (i.e.&nbsp;a <code>.py</code> file) and then <em>use</em> it in a notebook. To do this, just place the <code>.py</code> file in the same directory as the notebook. For example, the file <code>source.py</code> in the same directory contains a custom function (which prints a message). I can use like this:</p>
-<div id="cell-7" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> source </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>source.my_custom_function()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>I implemented this function in the file source.py</code></pre>
-</div>
-</div>
+<section id="presence-outside-of-class" class="level3">
+<h3 class="anchored" data-anchor-id="presence-outside-of-class">Presence Outside of Class</h3>
+<ul>
+<li><em>How often have you attended Student Hours or Peer Help?</em> So much. Alex and I and tight now. I go every almost Sunday and Monday and then some Wednesdays to see Steven. I usually attended 3-5 hours of Peer help hours a week for this course.</li>
+<li><em>How often have you asked for or received help from your fellow students?</em> I have asked a few people who I have also seen in help hours for help if I see we are working on similar assignments.</li>
+<li><em>Have you been regularly participating in a study group outside class?</em> No.&nbsp;Almost all the work I do for this course is individual thus far, but I am open to that changing! and excited for our group project.<br>
+</li>
+<li><em>How often have you posted questions or answers in Slack?</em> I have communicated with peers via Slack for help, but have not posted questions in the questions chanel.</li>
+</ul>
 </section>
-<section id="markdown" class="level1">
-<h1>Markdown</h1>
-<p>You can use Markdown syntax to write text in Markdown cells. Markdown allows you to create simple text formatting like bullets, italics, and section headers. The Quarto <a href="https://quarto.org/docs/authoring/markdown-basics.html">description of markdown basics</a> has everything you need to get started.</p>
-<section id="math" class="level2">
-<h2 class="anchored" data-anchor-id="math">Math</h2>
-<p>In addition to regular text using the Markdown specification, you can also write mathematics, enclosed between dollar signs. The syntax for writing math is very similar to the syntax used in the <span class="math inline">\(\LaTeX\)</span> markup language. For example, <code>$f(x) \approx y$</code> renders to <span class="math inline">\(f(x) \approx y\)</span>. To place complex mathematical expressions on their own lines, use double dollar signs. For example, the expression</p>
-<p><code>$$\mathcal{L}(a, b) = \sum_{i = 1}^n (ax_i + b - y_i)^2$$</code></p>
-<p>renders to:</p>
-<p><span class="math display">\[\mathcal{L}(a, b) = \sum_{i = 1}^n (ax_i + b - y_i)^2\;.\]</span></p>
-<p>Behind the scenes, math is powered by the MathJax engine. For more on how to write math, check this handy <a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">tutorial and quick reference</a>.</p>
+<section id="assignments-and-effort" class="level3">
+<h3 class="anchored" data-anchor-id="assignments-and-effort">Assignments and Effort</h3>
+<ul>
+<li><em>How many blog posts have you submitted?</em> 2… I have revised one them after receiving feedback so 2.5</li>
+<li><em>How many of your submitted blog posts are at each of the following feedback stages?</em>
+<ul>
+<li>E: <em>No revisions suggested:</em> 1</li>
+<li>M: <em>Revisions useful:</em> 1</li>
+<li>R: <em>Revisions encouraged:</em> 0</li>
+<li>N: <em>Incomplete:</em> 0 I am resubmitted the blog that received an M, with the suggested edits, so hopefully that changes to an E!</li>
+</ul></li>
+<li><em>Roughly how many hours per week have you spent on this course outside of class?</em> I work on my blog posts every week, it is just a little challenging, because I do not make a lot of progress without someone looking over my shoulder to edit my code. A lot of this work happens during peer help hours. Warmups, Blogs, and Help hours included I spend roughly 7 hours a week on this course.</li>
+</ul>
+</section>
+</section>
+<section id="what-youve-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-youve-learned">What You’ve Learned</h2>
+<p><em>At the beginning of the course, you may have expressed an interest in focusing a little extra on one or two of the following four categories:</em></p>
+<ul>
+<li><strong><em>Theory</em></strong>: <em>mathematical descriptions of frameworks and algorithms.</em></li>
+<li><strong><em>Implementation</em></strong>: <em>effective coding and use of tools in order to implement efficient machine learning algorithms.</em></li>
+<li><strong><em>Experimentation</em></strong>: <em>performing experiments to assess the performance of algorithms and clearly communicating about the results.</em></li>
+<li><strong><em>Social responsibility</em></strong>: <em>critical analysis of sources of bias and harm in machine learning algorithms; theoretical formulations of fairness and bias</em></li>
+</ul>
+<p><em>Did you choose to focus on any of these categories? If so, what have you done in order to pursue your interest?</em> I chose to focus on social responsibility and I really enjoy the week that we discussed this in class. The readings were fascinating and helped me to participate more in the discussions. However, I also wanted to challenge myself and improve my Python skills, given this is my first time learning and using it. There has definitely been a big learning curve and I am still gaining more knowledge each time I work with it, but I am definitely a lot more comfortable with the syntax and how it is set up. I have watched some Youtube videos about how it differs than Java, and done some 145 level coding (games that implement for loop, recursion, etc) to get comfortable with its syntax.</p>
+</section>
+<section id="reflecting-on-goals" class="level2">
+<h2 class="anchored" data-anchor-id="reflecting-on-goals">Reflecting on Goals</h2>
+<p><em>For each of the categories below, replace the “[your response here]” cell with 1-2 paragraphs in which you reflect on the following questions:</em></p>
+<ul>
+<li><em>In what ways are you <strong>on track to meet your goals</strong> from the beginning of the course? Be specific: explain what the goal is and what you are doing in order to meet it.</em></li>
+<li><em>In what ways are you <strong>not on track to meet your goals</strong> from the beginning of the course? Be specific: explain what the goal is and what gap you see between where you are and your goal.</em></li>
+<li><em>If there’s any <strong>context</strong> you want to share about how you are faring relative to your goals, please do!</em></li>
+</ul>
+<section id="blog-posts" class="level3">
+<h3 class="anchored" data-anchor-id="blog-posts">Blog Posts</h3>
+<p>This is the area of this course that I struggle most with and am also the most behind in. My goal for blog posts in this class were to complete more than half and have more than half of the blogs I did complete be Es. So far I have not accomplished this goal seeing as I have only turned in 2 blog posts. The good news is both of Blog posts are Es so I am at least achieving the second half of my goal, though one of them did require a revision. I am currently working on blog 5, but I have ben working on it for about 2 weeks. I was averaging a blog biweekly, but as the material get more complicated, it is taking me longer to complete the blogs. It is a little frustrating because I am dedicating the same amount of time as before, but I am confident I can catch up on my original goals. I think my original goal is still achievable, I just will need to dedicate more time to blog instead of other aspects of the course.</p>
+</section>
+<section id="course-presence-participation" class="level3">
+<h3 class="anchored" data-anchor-id="course-presence-participation">Course Presence (Participation)</h3>
+<p>The good news is I am on track for most of my participation goals. I have completed the warmups and been ready to present, even though I wasn’t asked to most times. I also have come to most classes. I hope to maintain this behavior, especially as the weather gets nicer. I think I can improve by participating more beyond our small groups. I have no problem speaking up and sharing my opinion in our small group, but struggle when the audience is the whole class. There have been times that I wanted to share or answer a question, but I wasn’t confident enough in my response. In the second half of this course, and especially as we move into our projects, I want to try to push past that and speak up more even if I am not 100% positive in my answer.</p>
+</section>
+<section id="project" class="level3">
+<h3 class="anchored" data-anchor-id="project">Project</h3>
+<p>As for the project I am very excited about getting rolling. Hearing everyone’s pitches was fascinating and there were quite a few that I found more interesting than my own! I was so inspired by a few that I decided to rewrite my pitch. As for my goals, they mostly remain the same. I am looking to contribute as much as possible, but recognize that my coding style is probably sower than most. I will focus on contributing to the project in other ways, organization, making sure everyone know what we are working on and when. Putting some of my product management skills to use, fascinating meetings and making sure we are on schedule and theme.</p>
+</section>
+<section id="other" class="level3">
+<h3 class="anchored" data-anchor-id="other">Other</h3>
+<p><em>Is there anything else that you want to share with me about what you have learned, how you have participated, or what you have achieved in CSCI 0451?</em></p>
+<p>I would love to hear from you, what I can improve on. My reflection from the course is very one sided since I can only speak on what I am feeling and struggling with, but as someone who has access to everyone else’s goals, achievements, and workload I would love to hear what things I should be doing more of and how I engage more in the course</p>
+</section>
+<section id="updating-your-goals" class="level3">
+<h3 class="anchored" data-anchor-id="updating-your-goals">Updating Your Goals</h3>
+<p>From your experience in CSCI 0451 and your other classes this semester, you may feel moved to make modifications to your goals. Are they still feasible? Too ambitious? Not ambitious enough? If you would like to revise any of your goals from your reflective goal-setting, you can do so below. For each goal you want to modify:</p>
+<ol type="1">
+<li>Clearly state what the goal was.</li>
+<li>Clearly state how you’ve done on that goal so far.</li>
+<li>Clearly state your proposed revised goal for the remainder of the course.</li>
+</ol>
+<p>So far my goals have been achievable, while still challenging me. I have not met my goal for blogs post, but I think it is a good challenge to keep that goal and try to complete some more blog posts especially as the project ramps up.</p>
+</section>
+</section>
+<section id="grade-and-goals" class="level2">
+<h2 class="anchored" data-anchor-id="grade-and-goals">Grade and Goals</h2>
+<p><em>Take 15 minutes to look back on your responses in each of the sections above. Then, state the letter grade that you feel reflects your learning, participation, and achievement in CSCI 0451 <strong>so far</strong>, and contextualize it against some of the soundbytes below.</em></p>
+<section id="what-a-grade-sounds-like" class="level3">
+<h3 class="anchored" data-anchor-id="what-a-grade-sounds-like">What a Grade Sounds Like</h3>
+<p><em>An <strong>A</strong> sounds like:</em></p>
+<ul>
+<li><em>“I am very proud of my time in this course.”</em></li>
+<li><em>“I have grown significantly in multiple ways that matter to me.”</em></li>
+<li><em>“I am ready to take the theory, techniques, and ideas of this course into my future classes, projects, hobbies, or career.”</em></li>
+</ul>
+<p><em>A <strong>B</strong> sounds like:</em></p>
+<ul>
+<li><em>“I had some opportunities to learn more, overall I feel good about my time in this course.”</em></li>
+<li><em>“I am able to explain some new things or achieve new tasks.”</em></li>
+<li><em>“I can see a few ideas from this course that will be relevant for my future classes, projects, hobbies, or career.”</em></li>
+</ul>
+<p><em>A <strong>C</strong> sounds like:</em></p>
+<ul>
+<li><em>“I often made a good effort, but I missed many opportunities to get more out of my time in this course.”</em></li>
+<li><em>“I might be able to complete some new tasks related to the course content, but only with significant further guidance.”</em></li>
+<li><em>“I don’t see any ways to take the contents of this course into my future classes, projects, hobbies, or career.”</em></li>
+</ul>
+<p><em>You might find that some of these soundbytes resonate and other’s don’t! Take some time, see what feels right, and don’t be afraid to celebrate your achievements.</em></p>
+<blockquote class="blockquote">
+<p><strong>Upon reflection, I feel that my learning, participation, and achievement in CSCI 0451 (so far) are best reflected by a grade of</strong> B+ / A-</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>A way in which I resonate with the soundbytes for that grade above is…</strong></p>
+</blockquote>
+<p>I have grown a lot in this course with math, Python, but also how conceptually I think about machine learning algorithms and how I think about the bias in the algorithms I interact with daily. However, I am behind on my goals, specifically my blog post goal, so I thats why I am not giving myself an A.</p>
+</section>
+</section>
+<section id="optional-how-to-improve" class="level2">
+<h2 class="anchored" data-anchor-id="optional-how-to-improve">(Optional:) How to Improve?</h2>
+<p><em>You may feel disappointed by your reflection. Sometimes we don’t achieve all our goals – it happens and it’s normal! If you are feeling disappointed by how you’ve learned, participated, or achieved in CSCI 0451, then feel free to write something about that below. Feel free to just write your feelings. If you have ideas for how to move forward, include those too! We’ll talk.</em></p>
+<p>Going forward, I hope to at least maintain the same effort and participation form the first 5 weeks if not more. I think I can do a better job speaking up in larger groups, and will try to be intentional about this in my project group. I want to complete blog 5 and at least one more before the project takes up too much of my time. Sometimes I get dejected by all the things I don’t understand in this class and I enter a state of resignation where I accept defeat. I want to try to push back against that and seek out answers whenever I feel dumb or like I do not know how to approach a problem.</p>
 
 
 </section>
