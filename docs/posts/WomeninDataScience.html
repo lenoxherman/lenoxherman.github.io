@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,35 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>
 
       .quarto-title-block .quarto-title-banner h1,
@@ -111,52 +80,23 @@ ul.task-list li input[type="checkbox"] {
 
       .quarto-title-block .quarto-title-banner {
         color: white;
-background-image: url(img/landscape.png);
+background-image: url(../img/landscape.png);
 background-size: cover;
       }
 </style>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">My Awesome CSCI 0451 Blog</span>
     </a>
   </div>
@@ -167,7 +107,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -188,129 +128,33 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Awesome CSCI 0451 Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p>WOMEN IN DATA SCIENCE BLOG POST</p>
+<p>Despite significant advancements in feminist movements, women remain conspicuously underrepresented in fields such as computing, mathematics, and engineering, which not only affects those within the industry but also the industry itself. Diversity fosters informed decision-making and sparks creativity. However, the current representation of women in STEM careers mirrors that of the 1960s, despite increased opportunities and educational access. This disparity, particularly in engineering, stems from historical shifts in the culture surrounding computing and subsequent academic requirements that disadvantage women and marginalized groups. To address this, efforts spotlighting the achievements of women in STEM are crucial. The Women in Data Science Conference that I attended, did just this. Highlighting women working with data in a variety of fields, such as political science, geography, engineering, and computer science the conference made space to discuss the different avenues women have taken with working with data. Additionally, the conference featured an alumni panel to give insight to Middlebury female alums now working in STEM fields. I really enjoyed this section as there is always a gap between education in college and success in the career world, and I enjoyed talking to alums, both recent and no0t so recent about how they used data science to make that jump.</p>
+<p>Even though we got the opportunity to speak with women in data related careers, these industries overall lack female representation. When industries lack proper diversity, perspectives become skewed, hindering unbiased innovation “The United States simply can’t afford to ignore the perspectives of half the population in future engineering and technical designs” (3. Corbett and Hill, 2015). Without diversity and representation in STEM industries, “everyone misses out on the novel solutions that diverse participation brings”(8, Corbett and Hill, 2015). Sometimes for non-diverse groups, the issue isn’t generating the “wrong” or unoptimal solution, its misidentifying the problem altogether.</p>
+<p>Right now, 26% of the population in STEM careers are women. This is an identical representation to STEM as the 1960s, despite the increased opportunity and education of women in STEM. Engineering is the most sex-segregated profession; however, compared to other profession such as lawyers or doctors, the gap between male engineers and female is exponentially wider. In the 1960s, engineering was a new field in need of workers, so it attracted men and women alike. However, when the personal computer was developed in the 80s, it created a hobbyist culture around computers, creating a gamer subculture that became dominated by men. Given the increasingly prevalence of computers both in the home and at work, colleges added increasingly stringent requirements for the computer science major. These additional requirements disproportionately disadvantaged women and people of other marginalized groups who were entering college with less math and programming experience.</p>
+<p>Breaking down barriers and challenging the underrepresentation of women in these fields, can be done by events that spotlighting the achievements of women in STEM, like this panel. Its important to combat workplace hostility towards women, as they are leaving STEM based jobs at a much higher rate than men. By providing visible role models, challenging stereotypes, and building support networks, these events inspire and empower women to pursue careers in STEM. They also advocate for change by raising awareness of systemic issues such as gender bias in hiring and promotion processes. By inspiring future generations of girls and students, these events help to create a more inclusive and diverse STEM community, ultimately contributing to greater gender equality in these fields.</p>
+<p>This need for diversity within disciplines, extends beyond the STEM communities. Just as the STEM industry grapples with the challenge of inclusively, Amy Yuen’s examination of the Security Council sheds light on the complexities of achieving equal representation in influential decision-making bodies, like the United Nations. These insights show the importance of addressing systemic barriers and promoting diversity to create more inclusive environments conducive to progress and equitable outcomes. Amy Yuen is political science professor, who shared with us how she utilized data and data modeling to determine if the UN security council was “democratic” and offered equal representation. She first shared some necessary background information about the council, describing how there are 5 core countries with veto power who do not move off the council, but 10 other seats in which countries campaign for based on region. Despite the obvious lack of democratic voting within the council, Yuen’s focus was on evaluating the issue of equal representation. Each country holds a rotating elected seat for a month, and Yuen measured success in terms of their output during this tenure. Interestingly, she discovered that factors such as a nation’s wealth or political policies did not significantly impact their monthly output. Instead, she found that sponsorship played a pivotal role in determining the level of output on the council. Despite some countries like Japan or Brazil frequently serving on the council, Yuen noted close to equal representation among rotating elected members.</p>
+<p>Similarly, Sarah M Brown, our keynote speaker, took a broader approach in investigating equal representation. She came all the way up from the University of Rhode Island to talk to us about the ethics of machine learning and how we can create systems that accurately represent society’s composition. As we are using machine learning more and more, specifically developing machine learning for sociotechnical systems, we need to direct our focus to making machine learning more fair and evaluate the context in which we create these systems.</p>
+<p>Her presentation started off by defining data science as equal parts computer science, stats, and domain expertise. Contrary to common practice, she emphasized the criticality of integrating domain expertise from the outset, rather than merely consulting domain experts later in the process. Contextualizing data, she argued, is key to unlocking solutions to STEM-related challenges. Expounding on this, she presented three fundamental “keys” that have shaped her work. However, she argued that it is important to contextualize this data, and pull upon non computer science or math backgrounds to unlock the keys to solving STEM related issues. The rest of the presentation was an exploration of three “keys” that have helped to unlock her work.</p>
+<p>Her first key was introduced back in 2004 in her high school social studies course. Her teacher described the need to use context to decipher primary sources. Drawing parallels to data as primary sources, Brown stressed the necessity of contextual understanding in deciphering, cleaning, and implementing data effectively. Her second key highlighted the social nuances and disciplinary norms inherent in different fields. She emphasized the need to situate data and models within the framework of the relevant discipline to ensure accurate interpretation and application. As a psych major, I particularly enjoyed this part of the talk. My interest is where the intersect of these two disciplines lie. My “domain skills” are being able to connect people and social leadership with data models and computer science, which can be isolating at times. The last “key” she mentioned was to meet people where they are. She recognized the power of precedent in shaping attitudes towards innovation and change. Using examples, she illustrated the challenges in prioritizing fairness over accuracy, urging for creative solutions rather than mere mathematical refinement.</p>
+<p>She briefly introduced the concept of “algorithmic reparations,” which is something I had never heard before. Brown provocatively challenged the prevailing notion that accuracy must always take precedence over fairness, highlighting the need for a shift in perspective within the data science community. From a psychological standpoint, she emphasized the imperative of creative thinking in addressing these ethical dilemmas, signaling a departure from traditional approaches grounded solely in mathematical optimization. She ended the lecture on a positive note, that while we are creating machine learning systems faster than we are auditing them, society is becoming increasingly vigilant in privatizing non-biased systems.</p>
+<p>Dr.&nbsp;Jessica L’roe, a female professor at Middlebury, continued to emphasize the importance of context within research like Professor Brown, drawing from her own study on deforestation and afforestation in various regions of Africa and their impacts on local communities. Employing a multifaceted approach, she collected both qualitative and quantitative data, enriching numerical findings with narratives from the local populace. One notable observation she shared was the rising population of smallholder farmers around a national park in Uganda, coinciding with an increase in tree planting activities. Looking deeper into the dynamics, she uncovered that non-local landowners were primarily responsible for the tree planting initiatives, often planting non-native species. Another intriguing aspect explored was the intergenerational changes in land parcel sizes and their implications on local livelihoods. Mothers in the area were interviewed and confessed that they were prioritizing education over agricultures for the children, because they feared that there would not be available land to farm. This nuanced examination highlights the significance of considering social dynamics alongside environmental changes and data in understanding complex issues like deforestation and community resilience.</p>
+<p>Laura Biester was our last keynote speaker and offered a different perspective, focusing more on training models to a data set. She presented on her research on computational linguistic models of mental health. Shifting the focus towards training models with specific datasets derived from public internet forums like Twitter and Reddit, Biester explored the utilization of language, particularly the use of first-person pronouns, as a measure of decreased mental health, among individuals with depression. However, Biester also addressed the challenges associated with accessing high-quality data due to privacy concerns, emphasizing the need for more representative datasets. I had never heard of natural language processing, so I found her talk very interesting. because it also once again combined my interests of psychology and computer science. Her model discovered that natural language models do a better job of capturing emotions, and manifested depressive symptoms, while linear regression models focus more on discussion of overall mental health and medication. Through her investigation, she uncovered the potential of out-of-domain datasets to test the generalizability of trained models, paving the way for a more holistic understanding of depression, emotions, and relationships through language processing techniques.</p>
+<p>In conclusion, achieving gender equality and diversity in STEM fields requires concerted efforts to challenge systemic biases and provide support for underrepresented groups. By recognizing the value of diversity and promoting inclusive representation, industries can foster innovation and creativity while ensuring equitable opportunities for all. The insights shared by various speakers, spanning disciplines from political science to linguistics, to geography highlight the multidimensional nature of the issue and all the ways that data can be explored and utilized towards a passion. Moving forward, I learned that continued education, contextualizing data and systemic reform are essential to create a more inclusive and equitable future for women both in and out of STEM professions.</p>
 
 
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1678424400000" data-listing-file-modified-sort="1707492124794" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
-<div class="thumbnail">
-<p><a href="./posts/new-test-post/index.html"> <img src="./posts/new-test-post/image.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-Second Post
-</h3>
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-<p>A new blog post that I just made!</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/new-test-post/index.html" class="no-external">
-<div class="listing-date">
-Mar 10, 2023
-</div>
-<div class="listing-author">
-Phil Chodrow
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1678424400000" data-listing-file-modified-sort="1682019385908" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
-<div class="thumbnail">
-<p><a href="./posts/new-new-test-post/index.html" class="no-external"></a></p><a href="./posts/new-new-test-post/index.html" class="no-external">
-<p><img src="./posts/new-new-test-post/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/new-new-test-post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/new-new-test-post/index.html" class="no-external">Timnit Gebru</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/new-new-test-post/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/new-new-test-post/index.html" class="no-external">A new blog post that I just made!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/new-new-test-post/index.html" class="no-external">
-<div class="listing-date">
-Mar 10, 2023
-</div>
-<div class="listing-author">
-Phil Chodrow
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1673326800000" data-listing-file-modified-sort="1707492150498" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
-<div class="thumbnail">
-<p><a href="./posts/example-blog-post/index.html" class="no-external"></a></p><a href="./posts/example-blog-post/index.html" class="no-external">
-<p><img src="./posts/example-blog-post/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/example-blog-post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/example-blog-post/index.html" class="no-external">Hello Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/example-blog-post/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/example-blog-post/index.html" class="no-external">An example blog post illustrating the key techniques you’ll need to demonstrate your learning in CSCI 0451.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/example-blog-post/index.html" class="no-external">
-<div class="listing-date">
-Jan 10, 2023
-</div>
-<div class="listing-author">
-Phil Chodrow
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
