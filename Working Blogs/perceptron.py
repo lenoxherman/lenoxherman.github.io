@@ -41,8 +41,7 @@ class LinearModel:
             self.w = torch.rand((X.size()[1]))
 
             # Compute the vector of scores s
-        s = torch.matmul(X, self.w)
-        return s
+        return X@self.w
  
     def predict(self, X):
         """
@@ -59,7 +58,7 @@ class LinearModel:
         """
        
         s = self.score(X)
-        y_hat = torch.where(s > 0, 1.0, 0.0)
+        y_hat = 1.0*(s >= 0)
         return y_hat
 
   
@@ -81,17 +80,28 @@ class Perceptron(LinearModel):
         
         y_ = 2*y - 1
         """
-        y_ = 2*y - 1
-        s = self.score(X)
-        
-        return sum(s*y_ > 0)/len(y_) 
+
+        y_hat = self.predict(X)
+        y_hat = 2*y_hat - 1
+        temp = 1.0*(y*y_hat <= 0)
+        return temp.mean()
 
         
 
     def grad(self, X, y):
         s = self.score(X)
-        y_ = 2*y - 1
-        return sum(s*y_ > 0)*X
+       
+        alpha = .01 # learning rate for the perceptron algorithm
+        missclassified = (s*y <= 0) 
+        updated_value_row = X*y[:,None]
+        updated_value = updated_value_row * missclassified[:,None]
+        
+        result = updated_value.mean(0) * alpha
+        return result 
+
+     
+   
+       
        
 
 class PerceptronOptimizer():
@@ -111,7 +121,14 @@ class PerceptronOptimizer():
 
             y, torch.Tensor: the target vector.  y.size() = (n,). The possible labels for y are {0, 1}
         """
-        y_ = 2*y - 1
-        s = self.model.loss(X, y)
-        self.model.w += self.model.grad(X, y)
+       
+        #s = self.model.loss(X, y)
+        # print(self.model.w.shape)
+        #s print(self.model.grad(X, y).shape)
+        loss = self.model.loss(X, y)
+        
+        grad = self.model.grad(X, y)
+        self.model.w += grad
+        
+        return loss
         
